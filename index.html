@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDesign Pro - Páginas Web Personalizadas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">WEB DESIGN PRO</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#eleccion">A tu Elección</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Páginas Web Personalizadas de Lujo</h1>
+            <p>Convierte tu negocio en digital con diseños exclusivos y profesionales</p>
+            <button class="cta-button" onclick="scrollToChat()">Comenzar Ahora</button>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios Premium</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="icon">🎨</div>
+                    <h3>Diseño Personalizado</h3>
+                    <p>Páginas únicas adaptadas a tu marca y necesidades específicas</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon">💼</div>
+                    <h3>Empresarial</h3>
+                    <p>Soluciones profesionales para empresas que quieren crecer en internet</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Funciona perfecto en computadora, tablet y teléfono</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon">⚡</div>
+                    <h3>Rápido y Seguro</h3>
+                    <p>Optimizados para velocidad máxima y seguridad garantizada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A tu Elección -->
+    <section id="eleccion" class="eleccion">
+        <div class="container">
+            <h2>A Tu Elección - Cotiza Tu Página</h2>
+            <p class="section-subtitle">Cuéntanos tu idea y nuestra IA calculará el precio exacto</p>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <p>¡Hola! 👋 Soy tu asistente de IA. Cuéntame sobre tu proyecto:</p>
+                        <ul class="suggestions">
+                            <li onclick="sendMessage('Quiero una página de e-commerce para vender ropa')">E-commerce</li>
+                            <li onclick="sendMessage('Necesito una página de servicios profesionales')">Servicios</li>
+                            <li onclick="sendMessage('Quiero un portafolio para mostrar mi trabajo')">Portafolio</li>
+                            <li onclick="sendMessage('Necesito un sitio web complejo con base de datos')">Complejo</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="chat-input-area">
+                    <input type="text" id="userInput" placeholder="Escribe tu descripción del proyecto..." onkeypress="handleEnter(event)">
+                    <button onclick="sendMessage()" class="send-button">Enviar</button>
+                </div>
+            </div>
+
+            <!-- Cotización -->
+            <div id="cotizacion" class="cotizacion hidden">
+                <div class="cotizacion-card">
+                    <h3>Tu Cotización</h3>
+                    <div class="precio-container">
+                        <div class="precio">
+                            <span class="etiqueta">En Dólares (USD)</span>
+                            <span class="valor" id="precioDolar">$0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="etiqueta">En Pesos Argentinos (ARS)</span>
+                            <span class="valor" id="precioARS">$0</span>
+                        </div>
+                    </div>
+                    <p class="descripcion-proyecto" id="descripcionProyecto"></p>
+                    <button class="contactar-button" onclick="mostrarContacto()">Contactar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>¿Dudas? Contactanos Directamente</h2>
+            <div class="contacto-info">
+                <div class="contact-card">
+                    <h3>📱 WhatsApp</h3>
+                    <a href="https://wa.me/5492617227289" class="contact-link">+549 2617 227 289</a>
+                </div>
+                <div class="contact-card">
+                    <h3>📱 Teléfono</h3>
+                    <a href="tel:+5492613733931" class="contact-link">+549 2613 733 931</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 WebDesign Pro - Páginas Web de Lujo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
